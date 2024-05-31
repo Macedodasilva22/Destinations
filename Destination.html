@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div id="display2"></div>
+    <div id="display"></div>
+    <button onclick="addDestination()">Add</button>
+    <input id="newDestinationName" />
+    <script>
+      // async - this function is asynchronous
+      async function getDestinations() {
+        // await - waits for the axios.get to return . only then it will continue the program
+        const response = await axios.get("http://localhost:3000/destinations/");
+        let myDestinations = response.data;
+        // map - loop over the array for each destination - turns it into a string.
+        display2.innerHTML = myDestinations
+          .map(
+            (destination) => `${destination.name} - ${destination.score}
+             <button>Delete</button><br>`
+          )
+          .join("");
+      }
+
+      getDestinations();
+
+      async function addDestination() {
+        const newDestination = {
+          name: newDestinationName.value,
+          description: "This is a great southern city",
+          image:
+            "https: //cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg",
+          score: 8.2,
+        };
+        // Send a POST request to add the object
+        await axios.post(`http://localhost:3000/destinations/`, newDestination);
+        console.log("added");
+      }
+    </script>
+  </body>
+</html>

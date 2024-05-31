@@ -1,0 +1,39 @@
+{
+  "destinations": [
+    {
+      "id": "0",
+      "name": "Barcelona",
+      "score": 8.5,
+      "description": "Barcelona is the capital of Catalunya.",
+      "image": "https://media.timeout.com/images/105992807/750/422/image.webp"
+    },
+    {
+      "id": "1",
+      "name": "Los Angeles",
+      "score": 7.9,
+      "description": "Los Angeles is in the west coast of the USA",
+      "image": "https://cdn.britannica.com/22/154122-050-B1D0A7FD/Skyline-Los-Angeles-California.jpg"
+    },
+    {
+      "id": "2",
+      "name": "New York",
+      "score": 8.2,
+      "description": "New York is the biggest city in the USA",
+      "image": "https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Brazil",
+      "description": "This is a great southern city",
+      "image": "https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg",
+      "score": 8.2
+    },
+    {
+      "id": "4",
+      "name": "Argentina",
+      "description": "This is a great southern city",
+      "image": "https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg",
+      "score": 8.2
+    }
+  ]
+}
